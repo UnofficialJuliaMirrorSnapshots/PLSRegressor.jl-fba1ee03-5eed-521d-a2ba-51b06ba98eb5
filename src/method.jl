@@ -32,6 +32,8 @@ function fit(X::AbstractArray{T},
 
     Xi =  (copydata ? deepcopy(X) : X)
     Yi =  (copydata ? deepcopy(Y) : Y)
+
+
     if kernel == "rbf"
        model = Model(Xi,Yi,
                  nfactors,
